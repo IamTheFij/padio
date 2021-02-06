@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from codecs import open
 from os import path
 
@@ -17,7 +18,9 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://git.iamthefij.com/iamthefij/padio.git",
-    download_url=("https://git.iamthefij.com/iamthefij/padio.git/archive/master.tar.gz"),
+    download_url=(
+        "https://git.iamthefij.com/iamthefij/padio.git/archive/master.tar.gz"
+    ),
     author="iamthefij",
     author_email="",
     classifiers=[

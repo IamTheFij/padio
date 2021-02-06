@@ -83,8 +83,8 @@ dist-clean: clean
 
 # Install pre-commit hooks
 .PHONY: install-hooks
-install-hooks: $(ENV)
-	$(ENV)/bin/tox -e pre-commit -- install -f --install-hooks
+install-hooks: devenv
+	$(ENV)/bin/pre-commit install -f --install-hooks
 
 # Generates test coverage
 .coverage:

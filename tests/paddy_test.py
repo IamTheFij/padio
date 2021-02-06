@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from pathlib import Path
 
 import pytest
@@ -59,11 +60,7 @@ def test_calc_pad_length(file_paths, expected):
             ],
         ),
         (
-            [
-                "file.a123.txt",
-                "file.b123.txt",
-                "ignore.txt"
-            ],
+            ["file.a123.txt", "file.b123.txt", "ignore.txt"],
             [
                 "file.a123.txt",
             ],
