@@ -1,16 +1,13 @@
 # Build pipelines
 
 PYTHON_VERSIONS = [
-    "3.6",
     "3.7",
     "3.8",
     "3.9",
     "latest",
 ]
 
-PYPY3_VERSIONS = [
-    "3",
-]
+PYPY3_VERSIONS = []
 
 
 def main(ctx):
