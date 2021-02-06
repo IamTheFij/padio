@@ -99,16 +99,16 @@ def notify_step():
 
 # Builds a notify pipeline that will notify when a dependency fails
 def notify(depends_on=None):
-    if depends_on is None:
+    if not depends_on:
         depends_on = ["tests"]
 
-    return list(dict(
-        kind="pipeline",
-        name="notify",
-        depends_on=depends_on,
-        trigger=dict(status=["failure"]),
-        steps=[notify_step()]
-    ))
+    return [{
+        "kind": "pipeline",
+        "name": "notify",
+        "depends_on": depends_on,
+        "trigger": {"status": ["failure"]},
+        "steps": [notify_step()]
+    }]
 
 
 # Push package to pypi

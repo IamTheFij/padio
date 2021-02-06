@@ -1,5 +1,5 @@
 OPEN_CMD := $(shell type xdg-open &> /dev/null && echo 'xdg-open' || echo 'open')
-NAME := paddy
+NAME := padio
 ENV := env
 
 .PHONY: default
@@ -98,19 +98,3 @@ htmlcov/index.html: .coverage
 .PHONY: open-coverage
 open-coverage: htmlcov/index.html
 	$(OPEN_CMD) htmlcov/index.html
-
-# Cleans out docs
-.PHONY: docs-clean
-docs-clean:
-	rm -fr docs/build/* docs/source/code/*
-
-# Builds docs
-docs/build/html/index.html:
-	$(ENV)/bin/tox -e docs
-
-# Shorthand for building docs
-.PHONY: docs
-docs: docs/build/html/index.html
-
-.PHONY: clean-all
-clean-all: clean dist-clean docs-clean

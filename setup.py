@@ -11,13 +11,13 @@ with open(path.join(here, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="paddy",
+    name="padio",
     version="0.0.0",
     description="Zero pad numeric filenames",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://git.iamthefij.com/iamthefij/paddy.git",
-    download_url=("https://git.iamthefij.com/iamthefij/paddy.git/archive/master.tar.gz"),
+    url="https://git.iamthefij.com/iamthefij/padio.git",
+    download_url=("https://git.iamthefij.com/iamthefij/padio.git/archive/master.tar.gz"),
     author="iamthefij",
     author_email="",
     classifiers=[
@@ -39,7 +39,7 @@ setup(
     install_requires=[],
     entry_points={
         "console_scripts": [
-            "paddy=paddy.main:main",
+            "padio=padio:main",
         ],
     },
 )
