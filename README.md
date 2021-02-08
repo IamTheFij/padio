@@ -21,7 +21,13 @@ you can run:
 
 ## Installation
 
-    pip install padio
+Padio can be run on any system that includes Python 3 after installation with `pip`:
+
+    pip3 install padio
+
+Or by downloading `./padio.py` and placing it anywhere in your `$PATH`.
+
+*Note: I have not tested on Windows, but would welcome feedback or a patch*
 
 ## Usage
 
